@@ -1,0 +1,1 @@
+// footer.js - Persona 4
