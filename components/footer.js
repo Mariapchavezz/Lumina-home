@@ -1,1 +1,1 @@
-// footer.js - Persona 4
+// footer.js - Persona 4d
