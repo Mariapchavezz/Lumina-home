@@ -35,9 +35,9 @@
   ];
 
   const createCard = (p) => `
-    <article class="producto-card" data-id="${p.id}">
+    <article class="producto-card">
       <div class="producto-card__image-wrap">
-        <img src="${p.imagen}" alt="${p.alt}" loading="lazy">
+        <img src="${p.imagen}" alt="${p.alt}">
       </div>
 
       <div class="producto-card__info">
@@ -49,24 +49,25 @@
   `;
 
   const render = () => {
-    const container = document.createElement("section");
-    container.className = "productos-section";
+    const container = document.getElementById("productos");
 
     container.innerHTML = `
-      <div class="productos-header">
-        <div>
-          <h2>Featured products</h2>
-          <p>Our most loved wellness essentials</p>
+      <section class="productos-section">
+
+        <div class="productos-header">
+          <div>
+            <h2>Featured products</h2>
+            <p>Our most loved wellness essentials</p>
+          </div>
+          <a href="#">View all →</a>
         </div>
-        <a href="#">View all →</a>
-      </div>
 
-      <div class="productos-grid">
-        ${productos.map(createCard).join("")}
-      </div>
+        <div class="productos-grid">
+          ${productos.map(createCard).join("")}
+        </div>
+
+      </section>
     `;
-
-    document.querySelector("#home")?.after(container);
   };
 
   document.readyState === "loading"
