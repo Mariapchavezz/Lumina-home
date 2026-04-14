@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: white;
+  background: transparent;
   font-family: 'Inter', sans-serif;
 }
 
@@ -68,25 +68,6 @@ html, body {
   color: white;
   font-size: 13px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.footer-subscribe button:hover {
-  background-color: #8cc7c3;
-}
-
-.footer-message {
-  margin-top: 10px;
-  font-size: 13px;
-  color: white;
-}
-
-.footer-message.error {
-  color: white;
-}
-
-.footer-message.success {
-  color: white;
 }
 
 .footer-bottom {
@@ -127,26 +108,18 @@ html, body {
   color: #666;
   font-size: 13px;
   display: inline-block;
-  transition: 0.3s;
-}
-
-.footer-column ul li a:visited,
-.footer-column ul li a:active {
-  color: #666;
 }
 
 .footer-column ul li a:hover {
   color: #6c7cf0;
-  transform: translateX(4px);
 }
 
 .footer-copy {
   width: 100%;
-  margin-top: 30px;
-  padding: 10px 40px 0;
-
+  max-width: 1000px;
+  margin: 30px auto 0;
+  padding-top: 10px;
   border-top: 1px solid #ddd;
-
   font-size: 12px;
   color: #888;
   text-align: left;
