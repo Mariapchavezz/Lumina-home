@@ -33,4 +33,43 @@
       alt: "night skincare serum",
     },
   ];
+
+  const createCard = (p) => `
+    <article class="producto-card" data-id="${p.id}">
+      <div class="producto-card__image-wrap">
+        <img src="${p.imagen}" alt="${p.alt}" loading="lazy">
+      </div>
+
+      <div class="producto-card__info">
+        <h3 class="producto-card__name">${p.nombre}</h3>
+        <p class="producto-card__desc">${p.descripcion}</p>
+        <p class="producto-card__price">${p.precio}</p>
+      </div>
+    </article>
+  `;
+
+  const render = () => {
+    const container = document.createElement("section");
+    container.className = "productos-section";
+
+    container.innerHTML = `
+      <div class="productos-header">
+        <div>
+          <h2>Featured products</h2>
+          <p>Our most loved wellness essentials</p>
+        </div>
+        <a href="#">View all →</a>
+      </div>
+
+      <div class="productos-grid">
+        ${productos.map(createCard).join("")}
+      </div>
+    `;
+
+    document.querySelector("#home")?.after(container);
+  };
+
+  document.readyState === "loading"
+    ? document.addEventListener("DOMContentLoaded", render)
+    : render();
 })();
