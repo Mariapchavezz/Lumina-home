@@ -1,4 +1,4 @@
-// menu.js - Tyra Micolta
+// menu.js - Tyra Micolta 
 
 (function () {
 
@@ -57,8 +57,9 @@
     });
   };
 
-  document.readyState === "loading"
-    ? document.addEventListener("DOMContentLoaded", render)
-    : render();
+
+  window.addEventListener("load", () => {
+    setTimeout(render, 50);
+  });
 
 })();
