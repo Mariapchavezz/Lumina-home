@@ -1,3 +1,7 @@
+// menu.js - Tyra Micolta
+/* =========================
+   RENDER CONTENIDO
+========================= */
 const app = document.getElementById("home");
 
 app.innerHTML = `
@@ -9,12 +13,12 @@ app.innerHTML = `
         Transform your self-care routine with our thoughtfully crafted cannabis wellness products. 
         Each product is designed to bring calm, balance, and natural beauty to your day.
       </p>
-      <a href="#">Explore rituals →</a>
+      <a href="#" id="exploreBtn">Explore rituals →</a>
 
       <div class="hero-img"></div>
     </div>
 
-    <div class="section">
+    <div class="section" id="rituals">
       <h2>Shop by wellness goal</h2>
       <p>Find the perfect product for your needs</p>
 
@@ -30,6 +34,9 @@ app.innerHTML = `
   </div>
 `;
 
+/* =========================
+   CREAR CARDS
+========================= */
 function createCard(icon, text, className) {
   return `
     <div class="card ${className}">
@@ -38,3 +45,19 @@ function createCard(icon, text, className) {
     </div>
   `;
 }
+
+/* =========================
+   SCROLL SUAVE
+========================= */
+const exploreBtn = document.getElementById("exploreBtn");
+
+exploreBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const section = document.getElementById("rituals");
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
