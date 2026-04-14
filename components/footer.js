@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <input type="email" id="emailInput" placeholder="Enter your email">
           <button id="subscribeBtn">Subscribe</button>
         </div>
-        <!-- FIX: se agrega el div footer-message que faltaba en HTML original (ya estaba, se conserva) -->
         <div class="footer-message" id="footerMessage"></div>
       </div>
 
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <div class="footer-column">
             <h3>Quick Links</h3>
-            <!-- FIX: se agregan etiquetas <a> para que los estilos li a apliquen -->
             <ul>
               <li><a href="#">Shop</a></li>
               <li><a href="#">About</a></li>
@@ -38,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <div class="footer-column">
             <h3>Follow Us</h3>
-            <!-- FIX: se agregan etiquetas <a> para que los estilos li a apliquen -->
             <ul>
               <li><a href="#">Instagram</a></li>
               <li><a href="#">Twitter</a></li>
