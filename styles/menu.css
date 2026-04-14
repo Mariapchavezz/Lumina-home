@@ -1,1 +1,215 @@
-/* menu.css - Persona 2 */
+/* IMPORTAR INTER */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #2f2f2f;
+  color: #ffffff;
+}
+
+/* CONTENEDOR */
+.main-container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* HERO */
+.hero h1 {
+  font-size: clamp(26px, 5vw, 34px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.hero p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #cfcfcf;
+  line-height: 1.5;
+  margin-bottom: 15px;
+
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.hero a {
+  color: #b6e26d;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  transition: opacity 0.2s ease;
+}
+
+.hero a:hover {
+  opacity: 0.7;
+}
+
+/* HERO IMAGE */
+.hero-img {
+  margin-top: 20px;
+  border-radius: 24px;
+  overflow: hidden;
+  width: 100%;
+  height: 65vh;
+  min-height: 420px;
+
+  background-image: url("https://blog.cerdanyaviva.com/wp-content/uploads/2018/07/retiros-de-meditacion.jpg");
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+/* OVERLAY */
+.hero-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.4)
+  );
+}
+
+/* SECCIÓN */
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #cfcfcf;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   CAROUSEL (FIX FINAL)
+========================= */
+.carousel {
+  display: flex;
+  gap: 16px;
+
+  overflow-x: auto;
+  overflow-y: visible;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARDS */
+.card {
+  flex: 0 0 clamp(140px, 30%, 220px);
+  height: clamp(130px, 20vw, 180px);
+
+  border-radius: 24px;
+  padding: 18px;
+
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  text-align: center;
+
+  cursor: pointer;
+  position: relative;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  z-index: 10;
+}
+
+/* ACTIVE */
+.card:active {
+  transform: scale(0.96);
+}
+
+/* ICONO */
+.card span {
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* TEXTO */
+.card p {
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #111111;
+}
+
+/* COLORES */
+.relax { background: #cde88f; }
+.skin  { background: #f2d6c2; }
+.sleep { background: #9fd3d3; }
+.mood  { background: #f2c1d1; }
+.rituals { background: #e6e6e6; }
+
+/* ANIMACIÓN */
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+
+  .main-container {
+    padding: 40px;
+  }
+
+  .hero-img {
+    height: 75vh;
+  }
+
+  .card {
+    flex: 0 0 clamp(180px, 22%, 260px);
+    height: clamp(150px, 18vw, 200px);
+  }
+}
