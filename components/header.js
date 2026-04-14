@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   header.innerHTML = `
   <header class="hero">
-
-    <!-- NAV -->
     <nav class="navbar">
       <div class="logo">Lumina Herb</div>
 
@@ -21,9 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </nav>
 
-    <!-- HERO CONTENT -->
     <div class="hero-content">
-
       <div class="text">
         <h1>Natural balance<br>through plant-<br>based wellness</h1>
         <button>Shop collection →</button>
@@ -34,14 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <img src="https://res.cloudinary.com/dsybz6dpt/image/upload/v1776133537/image_2-2_yxrxvc.png" />
         </div>
       </div>
-
     </div>
-
   </header>
 
-  <!-- SECCIÓN BLANCA -->
   <section class="features">
-
     <div class="feature">
       <div class="icon green">🌿</div>
       <h4>Plant-based ingredients</h4>
@@ -59,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <h4>Clean formulas</h4>
       <p>No harsh chemicals, only natural goodness</p>
     </div>
-
   </section>
   `;
 });
