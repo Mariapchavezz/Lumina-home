@@ -1,10 +1,6 @@
-// menu.js - Tyra Micolta
-/* =========================
-   RENDER CONTENIDO
-========================= */
 const app = document.getElementById("home");
 
-app.innerHTML = `
+app.innerHTML += `
   <div class="main-container">
 
     <div class="hero">
