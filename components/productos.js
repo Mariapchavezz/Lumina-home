@@ -36,10 +36,15 @@
 
   const createCard = (p) => `
     <article class="producto-card">
-      <img src="${p.imagen}" alt="${p.alt}">
-      <h3>${p.nombre}</h3>
-      <p>${p.descripcion}</p>
-      <span>${p.precio}</span>
+      <div class="producto-card__image-wrap">
+        <img src="${p.imagen}" alt="${p.alt}">
+      </div>
+
+      <div class="producto-card__info">
+        <h3 class="producto-card__name">${p.nombre}</h3>
+        <p class="producto-card__desc">${p.descripcion}</p>
+        <p class="producto-card__price">${p.precio}</p>
+      </div>
     </article>
   `;
 
@@ -48,7 +53,19 @@
 
     container.innerHTML = `
       <section class="productos-section">
-        ${productos.map(createCard).join("")}
+
+        <div class="productos-header">
+          <div>
+            <h2>Featured products</h2>
+            <p>Our most loved wellness essentials</p>
+          </div>
+          <a href="#">View all →</a>
+        </div>
+
+        <div class="productos-grid">
+          ${productos.map(createCard).join("")}
+        </div>
+
       </section>
     `;
   };
