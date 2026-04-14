@@ -10,8 +10,9 @@
   `;
 
   const render = () => {
-    const container = document.createElement("section");
-    container.className = "menu-section";
+    // FIX: se usa el contenedor #menu-section que existe en el HTML
+    const container = document.getElementById("menu-section");
+    if (!container) return;
 
     container.innerHTML = `
       <div class="main-container">
@@ -42,9 +43,6 @@
 
       </div>
     `;
-
-    // 🔥 CLAVE: se agrega después de #home (igual que productos)
-    document.querySelector("#home")?.after(container);
 
     // SCROLL
     const exploreBtn = container.querySelector("#exploreBtn");
