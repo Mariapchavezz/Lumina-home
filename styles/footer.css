@@ -1,12 +1,4 @@
 /* footer.css - Luisa Hoyos*/
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  font-family: 'Inter', sans-serif;
-}
-
 
 body {
   min-height: 100vh;

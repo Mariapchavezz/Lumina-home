@@ -104,9 +104,6 @@ body {
   margin-bottom: 16px;
 }
 
-/* =========================
-   CAROUSEL (FIX FINAL)
-========================= */
 .carousel {
   display: flex;
   gap: 16px;
