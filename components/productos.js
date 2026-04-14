@@ -35,38 +35,22 @@
   ];
 
   const createCard = (p) => `
-    <article class="producto-card" data-id="${p.id}">
-      <div class="producto-card__image-wrap">
-        <img src="${p.imagen}" alt="${p.alt}" loading="lazy">
-      </div>
-
-      <div class="producto-card__info">
-        <h3 class="producto-card__name">${p.nombre}</h3>
-        <p class="producto-card__desc">${p.descripcion}</p>
-        <p class="producto-card__price">${p.precio}</p>
-      </div>
+    <article class="producto-card">
+      <img src="${p.imagen}" alt="${p.alt}">
+      <h3>${p.nombre}</h3>
+      <p>${p.descripcion}</p>
+      <span>${p.precio}</span>
     </article>
   `;
 
   const render = () => {
-    const container = document.createElement("section");
-    container.className = "productos-section";
+    const container = document.getElementById("productos");
 
     container.innerHTML = `
-      <div class="productos-header">
-        <div>
-          <h2>Featured products</h2>
-          <p>Our most loved wellness essentials</p>
-        </div>
-        <a href="#">View all →</a>
-      </div>
-
-      <div class="productos-grid">
+      <section class="productos-section">
         ${productos.map(createCard).join("")}
-      </div>
+      </section>
     `;
-
-    document.querySelector("#home")?.after(container);
   };
 
   document.readyState === "loading"
