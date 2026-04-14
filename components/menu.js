@@ -1,4 +1,4 @@
-// menu.js - Tyra Micolta
+// menu.js - Tyra Micolta 
 
 (function () {
 
@@ -43,8 +43,14 @@
       </div>
     `;
 
-    // 🔥 CLAVE: se agrega después de #home (igual que productos)
-    document.querySelector("#home")?.after(container);
+    const home = document.querySelector("#home");
+    const productos = document.querySelector(".productos-section");
+
+    if (productos) {
+      productos.before(container);
+    } else {
+      home.after(container);
+    }
 
     // SCROLL
     const exploreBtn = container.querySelector("#exploreBtn");
@@ -59,8 +65,9 @@
     });
   };
 
-  document.readyState === "loading"
-    ? document.addEventListener("DOMContentLoaded", render)
-    : render();
+
+  window.addEventListener("load", () => {
+    setTimeout(render, 50);
+  });
 
 })();
