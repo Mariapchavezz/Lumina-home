@@ -117,3 +117,29 @@
   color: #ffffff;
 }
 
+/* ── Responsive ───────────────────────── */
+
+@media (min-width: 640px) {
+  .productos-section {
+    padding: 64px 48px 80px;
+  }
+
+  .productos-grid {
+    gap: 24px;
+  }
+
+  .productos-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .productos-section {
+    padding: 72px 72px 96px;
+  }
+
+  .productos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+}
