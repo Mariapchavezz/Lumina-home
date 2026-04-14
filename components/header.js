@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <nav class="navbar">
       <div class="logo">Lumina Herb</div>
 
+       <!-- NAV -->
       <ul class="nav-links">
         <li>Shop</li>
         <li>About</li>
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </nav>
 
+    <!-- HERO CONTENT -->
     <div class="hero-content">
       <div class="text">
         <h1>Natural balance<br>through plant-<br>based wellness</h1>
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </header>
 
+  <!-- SECCIÓN BLANCA -->
   <section class="features">
     <div class="feature">
       <div class="icon green">🌿</div>
